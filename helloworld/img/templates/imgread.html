@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>images</title>
+  </head>
+       <body>
+            <h2>Hello Srija!</h2>
+       <hr>
+       <form method="post" enctype="multipart/form-data">
+           {% csrf_token %}
+           <label for="caption">Caption:</label>
+           <input type="text" id="caption" name="caption" required><br><br>
+           select an image to upload:
+           <input type="file" name="filetoupload" id="filetoupload"><br><br>
+           <input type="submit" value="upload image" name="submit">
+       </form>
+  <hr>
+       </body>
+</html>

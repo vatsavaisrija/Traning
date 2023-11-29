@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Caption</th>
+        <th>File to upload</th>
+    </tr>
+    {% for display in Img %}
+    <tr>
+        <td>{{display.id}}</td>
+        <td>{{display.caption}}</td>
+        <td><img src="{{display.filetoupload}}" height="50" width="60"> </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="get">
+    {% csrf_token %}
+    <table border="2">
+        <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>address</th>
+            <th>phone</th>
+        </tr>
+            {% for i in employee %}
+
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.phone}}</td>
+            <td><a href="del/<int:id>/"></a> </td>
+        </tr>
+              {% endfor %}
+
+    </table>
+
+</form>
+
+</body>
+</html>
